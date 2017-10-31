@@ -1,0 +1,11 @@
+{
+  "name": "play-with-puppet",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/MicroBenz/play-with-puppet.git",
+  "author": "MicroBenz <microbenz.prob@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer": "^0.12.0"
+  }
+}
