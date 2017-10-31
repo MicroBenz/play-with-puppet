@@ -6,6 +6,8 @@
   "author": "MicroBenz <microbenz.prob@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "colors": "^1.1.2",
+    "log-symbols": "^2.1.0",
     "puppeteer": "^0.12.0"
   }
 }
