@@ -14,6 +14,7 @@ const desktop = async browser => {
   });
   await page.goto('https://www.google.com');
   await screenshot.captureScreen(page, 'multi-device', 'desktop');
+  await page.close();
   logger.success('Finished test: Open Google in Desktop');
 };
 
@@ -31,6 +32,7 @@ const openBrowserWithDevice = async (browser, device) => {
   await page.emulate(devices[device]);
   await page.goto('https://www.google.com');
   await screenshot.captureScreen(page, 'multi-device', `mobile-${device.split(' ').join('-')}`);
+  await page.close();
 };
 
 module.exports = {
