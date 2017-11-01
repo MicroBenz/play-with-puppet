@@ -3,17 +3,17 @@ const assert = require("assert");
 
 let browser;
 
-describe('Test Puppeteer', async () => {
-  before(async () => {
-    browser = await puppeteer.launch({
-      timeout: 0,
-      headless: true
-    });
+before(async () => {
+  global.browser = await puppeteer.launch({
+    timeout: 0,
+    headless: true
   });
+});
 
+describe('Test Puppeteer', async () => {
   describe('Open Google', () => {
     it('Should done open Google site with Search result', async () => {
-      const page = await browser.newPage();
+      const page = await global.browser.newPage();
       await page.setViewport({
         width: 1280,
         height: 720
@@ -27,6 +27,6 @@ describe('Test Puppeteer', async () => {
       return page.close();
     })
   })
-
-  after(async () => browser.close())
 });
+
+after(async () => global.browser.close());
